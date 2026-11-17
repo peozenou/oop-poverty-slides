@@ -198,7 +198,7 @@ The 2025 GMR attributes declining impoverishing OOP to global poverty reduction 
 ```{=latex}
 \setlength{\itemsep}{1.1em}
 ```
-1. Partition the change in impoverishing OOP, $\Delta I$, into a **poverty component** and a **financial‑protection component**, with no residual.
+1. Partition the change in impoverishing OOP, $\Delta I$, into a **poverty component** and a **financial‑hardship component**, with no residual.
 2. Implement the decomposition at two levels:
    - **(i) Macro-level**: from country‑year datapoints already published (poverty headcounts; impoverishment components).
    - **(ii) Micro-level**: from household survey data with total consumption, OOP and a poverty line.
