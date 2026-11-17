@@ -545,7 +545,16 @@ The same households are interviewed at $t_0$ and $t_1$. Both cross‑section met
 \end{multicols}
 ```
 
-## Questions/Comments {.closing}
+## Questions/Comments {.closing .figure-slide}
+
+::: {.content-visible when-format="revealjs"}
+::: {.figure-row}
+![](figures/geneva.jpg){width=100% fig-align="center"}
+:::
+:::
+::: {.content-visible when-format="beamer"}
+![](figures/geneva.jpg){width=70% fig-align="center"}
+:::
 
 ```{=latex}
 \vfill
