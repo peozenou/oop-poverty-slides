@@ -1,0 +1,85 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+$presentation-heading-color: #142f58;
+$presentation-heading-font-weight: 600;
+$presentation-font-size-root: 28px;
+$link-color: #142f58;
+$body-color: #1a1a19;
+$code-block-font-size: 0.7em;
+
+/*-- scss:rules --*/
+.reveal { height: calc(100% - 52px); }
+.reveal .progress { position: fixed; bottom: 0; }
+.reveal .slide-number { position: fixed; bottom: 8px; color: #6b6b66; }
+.reveal h1.title { font-size: 1.6em; }
+.reveal .subtitle { color: #44443f; font-size: 1.0em; }
+.reveal .small { font-size: 0.68em; color: #44443f; }
+.reveal table { font-size: 0.72em; }
+.reveal table th { background: #eef1f5; color: #142f58; }
+.reveal .footer { color: #6b6b66; font-size: 0.5em; }
+.reveal .slides section h2 { border-bottom: 2px solid #142f58; padding-bottom: 0.1em; margin-bottom: 0.5em; font-size: 1.15em; }
+.reveal .slides section.title-slide h2 { border: none; }
+.reveal strong { color: #142f58; }
+.reveal li { margin-bottom: 0.25em; }
+.reveal .med { font-size: 0.8em; }
+.reveal .med li { margin-bottom: 0.15em; }
+.reveal .sechead { display: block; color: #142f58; border-left: 5px solid #142f58; padding-left: 0.45em; margin: 0.2em 0 0.35em; font-size: 1.05em; }
+.reveal .centered { text-align: center; }
+.deck-branding { position: fixed; z-index: 30; left: 84px; right: 84px; bottom: 4px; display: flex; align-items: flex-end; justify-content: space-between; pointer-events: none; }
+.deck-branding img { display: block; width: auto; object-fit: contain; }
+.deck-branding .world-bank-logo { height: 37px; }
+.deck-branding .who-logo { width: 110px; height: auto; }
+/* SDG 3.8.2 slide: sections spread over the slide, with room left under the table note */
+.reveal .slides section.spaced p { margin: 0.4em 0; }
+.reveal .slides section.spaced .sechead { margin-top: 0.7em; }
+.reveal .slides section.spaced table { margin-top: 0.55em; font-size: 0.84em; }
+/* slides with few items: use the vertical space */
+.reveal .slides section.roomy > ol > li, .reveal .slides section.roomy > ul > li { margin-bottom: 0.9em; }
+.reveal .slides section.roomy li li { margin-top: 0.3em; margin-bottom: 0.3em; }
+.reveal .slides section.roomy p { margin: 0.7em 0; }
+.reveal .slides section.roomy table { margin: 0.7em auto 1.0em; font-size: 0.8em; }
+/* large tables (key parameters, applications) */
+.reveal .slides section.bigtable table { font-size: 0.9em; margin: 0.4em auto 0.6em; }
+.reveal .slides section.bigtable table td, .reveal .slides section.bigtable table th { padding: 0.22em 0.6em; }
+/* references: readable size, two columns to use the width */
+.reveal .slides section.refs #refs, .reveal .slides section.refs.smaller #refs { font-size: 22px !important; columns: 2; column-gap: 2.2em; }
+.reveal .slides section.refs #refs .csl-entry { break-inside: avoid; margin-bottom: 0.55em; line-height: 1.25; }
+/* Objectives: few items, larger type */
+.reveal .slides section.objectives ol { font-size: 1.25em; }
+.reveal .slides section.objectives > ol > li { margin-bottom: 1.4em; }
+/* dense slides: smaller table and lists */
+.reveal .slides section.compact table { font-size: 0.74em; margin: 0.35em auto 0.6em; }
+.reveal .slides section.compact > ul { font-size: 0.88em; }
+.reveal .slides section.compact li { margin-bottom: 0.32em; }
+.reveal .slides section.compact p { font-size: 0.8em; margin: 0.2em 0; }
+/* \boxed{} renders as MathML <menclose>, which Chrome does not draw: give it a CSS border */
+.reveal .identity-box { display: inline-block; border: 3px solid #142f58; border-radius: 12px; padding: 0.2em 0.5em; margin: 0.35em auto; }
+.reveal div.identity-box { display: table; }
+.reveal .identity-box p { margin: 0; }
+.reveal .identity-box menclose[notation="box"] { border: none; padding: 0; }
+.reveal .poverty-headcount { color: #142f58; }
+/* the boxed total-impoverishment identity highlights its P_t in maroon instead of the deck-wide navy */
+.reveal .identity-box .poverty-headcount { color: #7a1f2b; }
+.reveal .slides section.figure-slide.present { display: flex !important; flex-direction: column; height: 100%; }
+.reveal .figure-slide > :not(.figure-row) { flex-shrink: 0; }
+.reveal .figure-slide .figure-row { flex: 1; min-height: 0; margin: 0.2em 0; }
+.reveal .figure-row > .columns, .reveal .figure-row .column, .reveal .figure-row .quarto-figure, .reveal .figure-row figure, .reveal .figure-row p { height: 100%; min-height: 0; margin-top: 0; margin-bottom: 0; }
+.reveal .figure-row img { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; margin: 0 auto; object-fit: contain; }
+.reveal .larger-text .med { font-size: 0.9em; }
+.reveal .figure-slide > .fragment > :last-child, .reveal .figure-slide > :last-child p:last-child { margin-bottom: 0; }
+.reveal .slides section.combined-effects > h2 { margin-bottom: 0.2em; }
+.reveal .combined-effects > .columns .column > p { margin: 0 0 0.2em; }
+.reveal .combined-effects > .columns .med { font-size: 0.85em; line-height: 1.15; }
+.reveal .combined-effects > .columns .med ul { display: block; margin: 0; padding-left: 1.1em; }
+.reveal .combined-effects > .columns .med li { margin-bottom: 0.12em; }
+.reveal .combined-effects > .centered p { margin: 0; }
+.reveal .combined-effects > .centered .identity-box { margin: 0; padding: 0.1em 0.35em; }
+.reveal .combined-effects > .fragment ul { margin-top: 0; margin-bottom: 0; }
+/* macro decomposition laid out as a grid: equation on top, labels under each term */
+.reveal .eqgrid table { border: none; margin: 0.4em auto 0.5em; width: 96%; }
+.reveal .eqgrid table thead th { background: none; color: #1a1a19; font-size: 1.8em; font-weight: normal; border: none; padding: 0.1em 0.3em; }
+.reveal .eqgrid table td { font-size: 1.15em; color: #44443f; border: none; border-top: 2px solid #142f58; padding: 0.35em 0.4em; vertical-align: top; line-height: 1.25; }
+.reveal .eqgrid table td:nth-child(2), .reveal .eqgrid table td:nth-child(4), .reveal .eqgrid table td:nth-child(6) { border-top: none; }
+.reveal .eqgrid table tbody tr { background: none !important; }
+/* an OpenType MATH font lets Chrome stretch delimiters and braces in MathML */
+.reveal math { font-family: "Latin Modern Math", "STIX Two Math", "Cambria Math", math; }
